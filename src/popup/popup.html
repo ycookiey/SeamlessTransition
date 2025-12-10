@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seamless Transition</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1 class="popup-title">
+        <span class="icon">🌊</span>
+        Seamless Transition
+      </h1>
+    </header>
+
+    <main class="popup-content">
+      <!-- メイン切替 -->
+      <div class="setting-row main-toggle">
+        <label for="enableToggle" class="setting-label">
+          <span class="label-text">有効</span>
+          <span class="label-description">ページ遷移時のちらつき防止</span>
+        </label>
+        <label class="toggle-switch">
+          <input type="checkbox" id="enableToggle" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <hr class="divider">
+
+      <!-- 詳細設定 -->
+      <div class="settings-section">
+        <h2 class="section-title">設定</h2>
+        
+        <div class="setting-row">
+          <label for="fadeSlider" class="setting-label">
+            <span class="label-text">フェード時間</span>
+            <span class="label-value" id="fadeValue">0.3秒</span>
+          </label>
+          <input type="range" id="fadeSlider" min="100" max="1000" step="100" value="300" class="slider">
+        </div>
+
+        <div class="setting-row">
+          <label for="timeoutSlider" class="setting-label">
+            <span class="label-text">タイムアウト</span>
+            <span class="label-value" id="timeoutValue">3秒</span>
+          </label>
+          <input type="range" id="timeoutSlider" min="1000" max="10000" step="500" value="3000" class="slider">
+        </div>
+      </div>
+    </main>
+
+    <footer class="popup-footer">
+      <span class="version">v1.0.0</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
